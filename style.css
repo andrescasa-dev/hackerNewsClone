@@ -72,3 +72,32 @@ meter {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
+
+body{
+  margin: 8px 120px;
+}
+
+header{
+  gap: 5px;
+  display: flex;
+  background-color: orange;
+  width: 100%;
+}
+
+header > div{
+  gap: inherit;
+  display: flex;
+}
+
+header > div h2::after{
+  content: '|';
+}
+
+header > div h2:last-of-type::after{
+  content: '';
+}
+
+main{
+  background-color: antiquewhite;
+  min-height: 1200px;
+}
