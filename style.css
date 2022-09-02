@@ -89,11 +89,11 @@ header > div{
   display: flex;
 }
 
-header > div h2::after{
+header > div a::after{
   content: '|';
 }
 
-header > div h2:last-of-type::after{
+header > div a:last-of-type::after{
   content: '';
 }
 
@@ -101,3 +101,54 @@ main{
   background-color: antiquewhite;
   min-height: 1200px;
 }
+
+a{
+  cursor: pointer;
+}
+
+body{
+  font-family: sans-serif;
+  font-size: small;
+}
+
+/* ================ Components  ================ */ 
+
+/* ================ stories  ================ */ 
+
+
+.stories-container{
+  padding-top: 10px;
+  padding-left: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.story{
+  display: flex;
+  color: rgba(78, 78, 78, 0.536);
+}
+
+.story .story__title{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.story .story__title h2{
+  color: black;
+}
+
+.story .story__title span{
+  font-size: smaller;
+}
+
+.story .story__info{
+  font-size: smaller;
+  display: flex;
+  gap: 10px;
+}
+
+/* ================ stories  ================ */
+
+/* ================ Components  ================ */ 

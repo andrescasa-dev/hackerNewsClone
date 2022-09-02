@@ -5,26 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hacker news</title>
-  <script src="index.js" defer></script>
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" type="module" defer></script>
 </head>
 <body>
   <header>
     <img src="https://news.ycombinator.com/y18.gif" alt="hacker news">
     <h1>Hacker News</h1>
     <div>
-      <link href="#/new">new</link>
-      <link href="#/past">past</link>
-      <link href="#/comments">comments</link>
-      <link href="#/ask">ask</link>
-      <link href="#/show">show</link>
-      <link href="#/jobs">jobs</link>
-      <link href="#/submit">submit</link>
+      <a href="#/top">top</a>  
+      <a href="#/new">new</a>      
+      <a href="#/ask">ask</a>
+      <a href="#/show">show</a>
     </div>
     <button>login</button>
   </header>
   <main>
-
+    <div>
+      <div id="router-outlet"></div>
+    </div>
   </main>
+  <script src="//unpkg.com/navigo@6"></script>
 </body>
 </html>
