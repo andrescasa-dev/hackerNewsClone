@@ -1,4 +1,4 @@
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(:not(hr, html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -100,6 +100,7 @@ header > div a:last-of-type::after{
 main{
   background-color: antiquewhite;
   min-height: 1200px;
+  padding-top: 10px;
 }
 
 a{
@@ -108,24 +109,29 @@ a{
 
 body{
   font-family: sans-serif;
-  font-size: small;
+  font-size: smaller;
+}
+
+
+.error{
+  padding: 20px;
+  color: red;
 }
 
 /* ================ Components  ================ */ 
 
-/* ================ stories  ================ */ 
-
-
-.stories-container{
-  padding-top: 10px;
-  padding-left: 10px;
-  gap: 10px;
+.container{
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
+  gap: 10px;
 }
+
+/* ================ stories  ================ */ 
 
 .story{
   display: flex;
+  gap: 5px;
   color: rgba(78, 78, 78, 0.536);
 }
 
@@ -150,5 +156,33 @@ body{
 }
 
 /* ================ stories  ================ */
+
+/* ================ comments  ================ */
+
+.comment .comment__info{
+  color: rgba(78, 78, 78, 0.536);
+  font-size: smaller;
+}
+
+.comment .comment__content{
+  padding-left: 19px;
+}
+
+.comment--level-1{
+  margin-left: 20px;
+}
+
+.comment--level-2{
+  margin-left: 30px;
+}
+
+.comment--level-3{
+  margin-left: 40px;
+}
+
+.comment--level-4{
+  margin-left: 50px;
+}
+/* ================ comments  ================ */
 
 /* ================ Components  ================ */ 

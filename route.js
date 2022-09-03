@@ -1,5 +1,5 @@
 import stories from "./pages/stories.js";
-import newView from "./pages/new.js";
+import comments from "./pages/comments.js";
 
 const router = new Navigo('index.html', true, '#');
 
@@ -15,6 +15,7 @@ export default class RouterHandler{
       {path: '/new', page: stories},
       {path: '/ask', page: stories},
       {path: '/show', page: stories},
+      {path: '/item', page: comments},
     ]
     routes.forEach( ({path, page}) => {
       router.on(path,()=>{ page(path);}).resolve();

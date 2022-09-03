@@ -5,7 +5,7 @@ import Story from "../components/Story.js";
 export default async function stories(path){
   const stories = await fetchStories(path);
   const storiesHTML = stories.map((story, i)=>{ return Story({...story, index: ++i}) }).join('');
-  view.innerHTML = `<div class="stories-container">${storiesHTML}</div>`;
+  view.innerHTML = `<div class="container">${storiesHTML}</div>`;
 }
 
 async function fetchStories(path){
