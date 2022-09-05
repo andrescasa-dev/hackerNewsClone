@@ -10,11 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Reapply the pointer cursor for anchor tags */
-a, button {
-  cursor: revert;
-}
-
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {
   list-style: none;
@@ -104,7 +99,12 @@ main{
 }
 
 a{
+  color: black;
   cursor: pointer;
+}
+
+.active {
+  border-bottom: 1px solid black;
 }
 
 body{
@@ -119,6 +119,10 @@ body{
 }
 
 /* ================ Components  ================ */ 
+
+.hide{
+  display: none;
+}
 
 .container{
   display: flex;
@@ -159,30 +163,33 @@ body{
 
 /* ================ comments  ================ */
 
+.comment{
+  display: grid;
+  gap: 7px;
+}
+
 .comment .comment__info{
   color: rgba(78, 78, 78, 0.536);
   font-size: smaller;
 }
 
+.comment .comment__reply{
+  font-size: 12px;
+  text-decoration: underline;
+}
+
 .comment .comment__content{
-  padding-left: 19px;
+  padding-left: 20px;
 }
 
-.comment--level-1{
-  margin-left: 20px;
+.comment--level-0 + .comment--level-0{
+  margin-top: 20px;
 }
 
-.comment--level-2{
-  margin-left: 30px;
+.comment--level-0 > .comment__reply{
+  display: block;
 }
 
-.comment--level-3{
-  margin-left: 40px;
-}
-
-.comment--level-4{
-  margin-left: 50px;
-}
 /* ================ comments  ================ */
 
 /* ================ Components  ================ */ 
