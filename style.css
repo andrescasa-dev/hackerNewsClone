@@ -112,12 +112,14 @@ body{
   font-size: smaller;
 }
 
-
 .error{
   padding: 20px;
   color: red;
 }
 
+button{
+  cursor: pointer;
+}
 /* ================ Components  ================ */ 
 
 .hide{
