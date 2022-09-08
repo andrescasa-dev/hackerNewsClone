@@ -5,6 +5,7 @@ import store from "../store.js";
 export default function favorites(path){  
   const favoritesArr = store.state.favorites;
   const hasFavorites = favoritesArr.length > 0;
-  view.innerHTML = hasFavorites ? favoritesArr.map(favorite => Story({...favorite, index: undefined})).join('') 
-    : 'There is no favorites yet';
+  const content = hasFavorites ? favoritesArr.map(favorite => Story({...favorite, index: undefined})).join('') 
+  : 'There is no favorites yet';
+  view.innerHTML = `<div class='container'>${content}</div>`
 }
