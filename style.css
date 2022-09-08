@@ -77,6 +77,8 @@ header{
   display: flex;
   background-color: orange;
   width: 100%;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 header > div{

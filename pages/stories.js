@@ -27,20 +27,3 @@ async function fetchStories(path){
   const stories = await response.json();
   return stories;
 }
-
-document.addEventListener('click', (event)=>{
-  if(event.target.matches('button.story__btn-favorite')){
-    const storySelected = {...JSON.parse(event.target.dataset.story)};
-    const isFavorite = event.target.dataset.isFavorite === 'true';
-    const action = {
-      type: isFavorite ? 'REMOVE_FAVORITE' : 'ADD_FAVORITE',
-      payload: {
-        favorite: storySelected
-      }
-    }
-    store.dispatch(action);
-    const storyElement = view.querySelector(`.story[data-id="${storySelected.id}"]`)
-    storyElement.outerHTML = Story({...storySelected, isFavorite: checkFavorite(store.state.favorites, storySelected)});
-    console.log(store.state)
-  }
-});
